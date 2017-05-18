@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+          let form = document.getElementById("guessForm");
+          form.addEventListener("submit", function(event) {
+            event.preventDefault();
+              
+            let guess = {
+              room: document.getElementById('room').value,
+              weapon: document.getElementById('weapon').value
+            }
+            
+            console.log('guess ', guess);
+            
+            $.ajax({
+              type: "POST",
+              url: "/guess",
+              data: guess,
+              success: function(result){
+                  console.log(result)
+              }
+            })
+            
+          })
+          
+    })
+          
+        
+    </script>
+    <title>Welcome to the Clue Game</title>
+  </head>
+  <body>
+    <h1>Welcome to the Clue Game</h1>
+    <p>Once again, Mr.Boddy has been killed.  At this time all we know is that it was Professor Plum.</p>
+    <p>What we don't know is what weapon he used and in what room this took place.  
+    Enter your answers below to submit your theories until you correctly identify the room and the weapon.</p>
+    <form id="guessForm">
+      <h4>Room: </h4> <input id="room" type="text" name="room" />
+      <h4>Weapon: </h4><input id="weapon" type="text" name="weapon" />
+      <button type="submit">Submit</button>
+    </form>
+  
+  </body>
+  
+
+
+</html>
