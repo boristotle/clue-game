@@ -8,10 +8,10 @@
 
 3.  Create a variable called userGuesses that will be an array.
 
-4.  Create a variable called room and assign it to one of the folowing rooms: 
+4.  Create a variable called correctRoom and assign it to one of the folowing rooms: 
     Dining Room, Kitchen, Hall, Conservatory, and Library
 
-5.  Create a variable called weapon and assign it to one of the following weapons:
+5.  Create a variable called correctWeapon and assign it to one of the following weapons:
     candlestick, knife, revolver, rope, and poison
 
 6.  Create javascript logic in your post route that will send information back to the user that says whether
